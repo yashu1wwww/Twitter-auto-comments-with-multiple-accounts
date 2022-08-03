@@ -1,2 +1,17 @@
 # Twiiter-auto-comments-with-multiple-accounts
 Twiiter auto comments with multiple accounts
+Twitter auto comment using python
+
+change username & password in 11 & 15th line
+
+put required url in url text file
+
+change comment text where they are in cmt.py script
+
+Download The Latest Version Of Chrome Driver https://chromedriver.chromium.org/ & Extract The File And Place To These Folder open cmd and enter cmt.py
+
+👉Twitter Auto Comment https://youtu.be/52tglYAXP-M
+
+👉Twitter Auto Retweet & Likes https://youtu.be/E12nBOlIXA8
+
+👉Twitter Auto Tweet https://youtu.be/VIgeFb8rPZs
