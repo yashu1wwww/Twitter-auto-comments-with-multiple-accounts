@@ -16,7 +16,7 @@ password.send_keys("noway") #enter your twitter pass
 password.send_keys(Keys.ENTER)
 time.sleep(3)
 
-with open("urls.txt") as f:
+with open("urls.txt") as f:  #put url in url text file
     for url in f:
         driver.get(url) 
         
@@ -66,7 +66,7 @@ password.send_keys("bots123")  #enter your twitter pass
 password.send_keys(Keys.ENTER)
 time.sleep(3)
 
-with open("urls.txt") as f:
+with open("urls.txt") as f:  #where you already added url in text file so no neede add here
     for url in f:
         driver.get(url) 
   
