@@ -1,3 +1,5 @@
+#here i am added upto 5 accs which auto login to auto cmt if you want more means copy line from 3 to 55 and paste that in 275 line use note++ to find the number line if you want more means do copy paste and again and again and dont forgot to replace acc with password....
+#(note for auto login used accs must be non authentication accounts)
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
