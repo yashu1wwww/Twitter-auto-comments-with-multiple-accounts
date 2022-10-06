@@ -4,7 +4,7 @@ Twitter auto comment using python
 
 change username & password in 11 & 15th line
 
-and change url in 18th line and same in below codes 
+and change url in 18th line and do same in below codes 
 
 change comments which you required text where they are in cmt.py 
 
