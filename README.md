@@ -6,6 +6,8 @@ change username & password in 14 & 18th line and where username and password whe
 
 and change url in 18th line and do same in below codes where url is needed
 
+(note for auto login used accs must be non authentication accounts)
+
 Download The Latest Version Of Chrome Driver https://chromedriver.chromium.org/ & Extract The File And Place To These Folder open cmd  on that particular folder and enter cmt.py
 
 👉Twitter Auto Comment https://youtu.be/52tglYAXP-M
