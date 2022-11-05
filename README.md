@@ -2,6 +2,9 @@
 Twiiter auto comments with multiple accounts
 Twitter auto comment using python
 
+here i am added upto 3 accs which auto login to auto cmts to the post....
+if you more means copy line from 110 to 158 & paste it in 159 line & dont forgot change usename and password...
+
 change username & password in 14 & 18th line and where username and password where asked in below codes...
 
 and change url in 18th line and do same in below codes where url is needed
