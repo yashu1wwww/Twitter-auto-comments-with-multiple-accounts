@@ -2,20 +2,19 @@
 Twiiter auto comments with multiple accounts
 Twitter auto comment using python
 
-here i am added upto 3 accs which auto login to auto cmts to the post....
-if you more means copy line from 106 to 150 & paste it in 151 line & dont forgot change usename and password...
+Here, I have added up to 3 accounts which will auto-login and auto-comment to the post. If you need more accounts, copy lines from 106 to 150 and paste them in line 151. Don't forget to change the username and password.
 
-change username & password in 16 & 20th line and where username and password where asked in below codes...
+Change the username and password in lines 16 and 20, and where the username and password are asked in the code below.
 
-and change url in 23th line and do same in below codes where url is needed
+Also, change the URL in line 23 and do the same in the code below where the URL is needed.
 
-(note for auto login used accs must be non authentication accounts)
+(Note: For auto-login, the accounts used must be non-authentication accounts.)
 
-Download The Latest Version Of Chrome Driver https://chromedriver.chromium.org/ & Extract The File And Place To These Folder open cmd  on that particular folder and enter cmt.py or double click on cmt.py file...
+Download the latest version of the Chrome Driver from https://chromedriver.chromium.org/ and extract the file. Place it in the folder, open CMD in that particular folder, and enter cmt.py, or double-click on the cmt.py file.
 
-👉Twitter Auto Comment https://youtu.be/52tglYAXP-M
+👉 Twitter Auto Comment: https://youtu.be/52tglYAXP-M
 
-(in these video i botted auto comment for only using one acc you can use these code run multiple accounts to auto comment)
+(In this video, I have bot auto-commenting for only one account. You can use this code to run multiple accounts for auto-commenting.)
 
 👉Note:-
 
