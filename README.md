@@ -5,7 +5,7 @@ Here, I have added up to 2 accounts which will auto-login and auto-comment to th
 
 # Change the random words if you want different words in the 15th line, the username and password of Twitter in the 24th and 28th lines, the Twitter post URL in the 31st line, and replace the '5' with how many comments you want in the 51st line.
 
-# do same replacement in second acc where it's aksed..
+# do same replacement in second acc where it's asked..
 
 # Note: For auto-login, the accounts used must be non-authentication accounts
 
