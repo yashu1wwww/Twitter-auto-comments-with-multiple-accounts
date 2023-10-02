@@ -12,8 +12,14 @@ from selenium.webdriver import ActionChains
 import time
 import random
 
-commentsDict = ['good','amazing one','keep going','excellent','next video please','sub to your channel','shared to others','made my day','keep it up','sensational','rock it','challenge it','post video daily','work was amazing','needed more edit','edit was awesome',
-'what a video man','watched yesterday','your are genious','faster than light','your work needed success','new fan of you','keep rock dude','copy cat','link the video','listening','writing','reading','playing',] #replace with your words for comments to tweet
+commentsDict = ['good','amazing one','keep going','excellent','next video please','sub to your channel'
+'shared to others','made my day','keep it up','sensational','rock it','challenge it','post video daily'
+'work was amazing','needed more edit','edit was awesome','what a video man','watched yesterday'
+'you are genius','faster than light','your work needed success','new fan of you','keep rock dude'
+'copy cat','link the video','listening','writing','reading','playing','awesome content','mind-blowing'
+'inspiring','unbelievable','impressive','outstanding','fantastic','stellar','remarkable','exceptional'
+'brilliant','stellar','top-notch','superb','jaw-dropping','captivating','extraordinary','stellar'
+'unreal performance','world-altering','masterful','exceptional artist','incomparable','artistic brilliance'] #replace with your words for comments to tweet
 
 driver= webdriver.Chrome()
 driver.maximize_window()
