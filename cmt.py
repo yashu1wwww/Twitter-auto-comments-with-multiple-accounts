@@ -54,7 +54,7 @@ while True:
         time.sleep(2)  
 
         counter += 1
-        if counter == 5: #change how much you want comments to the tweet per acc
+        if counter == 5: #Change '5' to 'how many comments you want to do for a post...
             break
         
     except Exception as e:
@@ -98,7 +98,7 @@ while True:
         time.sleep(2)  
 
         counter += 1
-        if counter == 5: #change how much you want comments to the tweet per acc
+        if counter == 5: #Change '5' to 'how many comments you want to do for a post...
             break
         
     except Exception as e:
