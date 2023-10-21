@@ -13,12 +13,6 @@ Here, I have added up to 2 accounts which will auto-login and auto-comment to th
 
 Download the latest version of the Chrome Driver from https://chromedriver.chromium.org/ and extract the file. Place it in the folder, open CMD in that particular folder, and enter cmt.py, or double-click on the cmt.py file.
 
-👉Twitter Auto Comment
-
-https://youtu.be/52tglYAXP-M
-
-(In this video, I have bot auto-commenting for only one account. You can use the code to run multiple accounts for auto-commenting.)
-
 👉Note:-
 
 👉if your selenium version is in latest version then 
