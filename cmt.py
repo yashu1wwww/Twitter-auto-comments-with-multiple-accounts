@@ -105,6 +105,7 @@ while True:
         
 time.sleep(2)
 
+driver.close()
 
 
 
