@@ -5,11 +5,9 @@ Here, I have added up to 2 accounts which will auto-login and auto-comment to th
 
 # Change the random words if you want different words in the 15th line, the username and password of Twitter in the 30th and 34th lines, the Twitter post URL in the 37th line, and replace the '5' with how many comments you want in the 57th line.
 
-# if you want one more account means copy line from 67 to 106 and paste again and replace the usr and pswd etc...
+# if you want one more account means, copy line from 67 to 106 and paste again and replace the usr and pswd etc...
 
-# do same replacement in second acc where it's asked...
-
-# Note: For auto-login, the accounts used must be non-authentication accounts
+# Note: For auto-login, the accounts used must be non-authentication accounts.
 
 Download the latest version of the Chrome Driver from https://chromedriver.chromium.org/ and extract the file. Place it in the folder, open CMD in that particular folder, and enter cmt.py, or double-click on the cmt.py file.
 
