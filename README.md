@@ -13,6 +13,8 @@ Here, I have added up to 2 accounts which will auto-login and auto-comment to th
 
 # Note: For auto-login, the accounts used must be non-authentication accounts.
 
+# 👉 Note: Every time Twitter updates the code, it varies. So press 'Ctrl+Shift+C' to open the developer tools, and inspect and fork it..
+
 Download the latest version of the Chrome Driver from https://chromedriver.chromium.org/ and extract the file. Place it in the folder, open CMD in that particular folder, and enter cmt.py, or double-click on the cmt.py file.
 
 👉Note:-
