@@ -1,130 +1,272 @@
+#upto 5 accounts 
 from selenium import webdriver
-from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.common.exceptions import NoSuchElementException
-from selenium.common.exceptions import ElementClickInterceptedException
-from selenium.common.exceptions import StaleElementReferenceException
-from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver import ActionChains
 import time
+import random
 
-commentsDict = ['good @elonmusk', 'amazing one @elonmusk']  # Tambahkan komentar sesuai kebutuhan
-comment_iterator = iter(commentsDict) #replace with your words for comments to tweet
+# List of comments to post
+commentsDict = [
+    'good', 'amazing one', 'keep going', 'excellent', 'next video please', 'sub to your channel',
+    'shared to others', 'made my day', 'keep it up', 'sensational', 'rock it', 'challenge it',
+    'post video daily', 'work was amazing', 'needed more edit', 'edit was awesome', 'what a video man',
+    'watched yesterday', 'you are genius', 'faster than light', 'your work needed success', 'new fan of you',
+    'keep rocking dude', 'copy cat', 'link the video', 'listening', 'writing', 'reading', 'playing'
+]  # Replace with your words
 
-driver= webdriver.Chrome()
+# Set the number of comments you want to post
+MAX_COMMENTS = 1 
+
+driver = webdriver.Chrome()
 driver.maximize_window()
 
+# Open Twitter login page
 driver.get("https://twitter.com/i/flow/login")
-time.sleep(7)
-email = driver.find_element_by_name('text')
-email.send_keys("twitter234") #replace with your valid twitter username
+time.sleep(4)
+
+# Enter username
+email = driver.find_element(By.NAME, 'text')
+email.send_keys("twitter123")  # Replace with your valid Twitter username
 email.send_keys(Keys.ENTER)
 time.sleep(3)
-password = driver.find_element_by_name("password")
-password.send_keys("twitter123@#$%") #replace with your valid twitter password
+
+# Enter password
+password = driver.find_element(By.NAME, "password")
+password.send_keys("twitter_1234")  # Replace with your valid Twitter password
 password.send_keys(Keys.ENTER)
 time.sleep(5)
-driver.get("https://twitter.com/elonmusk/status/1708660084992029126")  #replace with your url where you  wanted to auto cmts to that post 
+
+# Navigate to the target tweet
+driver.get("https://twitter.com/elonmusk/status/1708660084992029126")  # Replace with your tweet URL
 time.sleep(5)
 
+# Counter to track the number of comments posted
 counter = 0
+
+for comment in commentsDict:
     try:
-    while True:
-        retweet_button = driver.find_element_by_xpath("//div[@data-testid='retweet']/div").click()  # retweet button
-        time.sleep(1) #retweet button
-
-        retweet_button = driver.find_element_by_xpath("//div[@data-testid='retweetConfirm']/div").click()  # retweet click #confirm
-        time.sleep(2) #click on retweet button
-
-        like_button = driver.find_element_by_xpath("//div[@data-testid='like']/div")  # like button
-        like_button.click() #click on like button
-        
-        time.sleep(2)
-        
-        comment = next(comment_iterator)
+        # Find the comment input box and type the comment
         send_button = driver.find_element(By.CLASS_NAME, 'public-DraftStyleDefault-ltr')
         send_button.send_keys(comment)
-except StopIteration:
-    print("All comments have been used.")
-        
         time.sleep(1)
         
-        # Click the post reply
-        driver.execute_script('document.querySelector("#react-root > div > div > div.css-175oi2r.r-13qz1uu.r-417010.r-18u37iz > main > div > div > div > div > div > section > div > div > div:nth-child(2) > div > div > div > div > div.css-175oi2r.r-14lw9ot.r-1h8ys4a.r-1f1sjgu > div:nth-child(2) > div > div > div > div.css-175oi2r.r-1iusvr4.r-16y2uox.r-1777fci.r-1h8ys4a.r-1bylmt5.r-13tjlyg.r-7qyjyx.r-1ftll1t > div.css-175oi2r.r-14lw9ot.r-jumn1c.r-xd6kpl.r-gtdqiz.r-ipm5af.r-184en5c > div:nth-child(2) > div > div > div > div.css-175oi2r.r-sdzlij.r-1phboty.r-rs99b7.r-lrvibr.r-19u6a5r.r-2yi16.r-1qi8awa.r-ymttw5.r-1loqt21.r-o7ynqc.r-6416eg.r-1ny4l3l").click()')
-        
-        time.sleep(2)  
+        # Click the post reply button
+        driver.execute_script('document.querySelector("[data-testid=\'tweetButtonInline\']").click()')
+        time.sleep(2)
 
         counter += 1
-        if counter == 1: #Change '5' to 'how many comments you want to do for a post...
+        if counter == MAX_COMMENTS:  # Stop when reaching the desired number of comments
             break
-        
+
     except Exception as e:
         print("An error occurred:", e)
-        break  
-        
-time.sleep(2)
+        break
 
+# Close the browser
+time.sleep(2)
 driver.close()
 
-driver= webdriver.Chrome()
+
+#2nd account
+driver = webdriver.Chrome()
 driver.maximize_window()
 
+# Open Twitter login page
 driver.get("https://twitter.com/i/flow/login")
-time.sleep(7)
-email = driver.find_element_by_name('text')
-email.send_keys("twitter234") #replace with your valid twitter username
+time.sleep(4)
+
+# Enter username
+email = driver.find_element(By.NAME, 'text')
+email.send_keys("twitter123")  # Replace with your valid Twitter username
 email.send_keys(Keys.ENTER)
 time.sleep(3)
-password = driver.find_element_by_name("password")
-password.send_keys("twitter123@#$%") #replace with your valid twitter password
+
+# Enter password
+password = driver.find_element(By.NAME, "password")
+password.send_keys("twitter_1234")  # Replace with your valid Twitter password
 password.send_keys(Keys.ENTER)
 time.sleep(5)
-driver.get("https://twitter.com/elonmusk/status/1708660084992029126")  #replace with your url where you  wanted to auto cmts to that post 
-time.sleep(7)
 
+# Navigate to the target tweet
+driver.get("https://twitter.com/elonmusk/status/1708660084992029126")  # Replace with your tweet URL
+time.sleep(5)
+
+# Counter to track the number of comments posted
 counter = 0
-try:
-    while True:
-        retweet_button = driver.find_element_by_xpath("//div[@data-testid='retweet']/div").click()  # retweet button
-        time.sleep(1) #retweet button
 
-        retweet_button = driver.find_element_by_xpath("//div[@data-testid='retweetConfirm']/div").click()  # retweet click #confirm
-        time.sleep(2) #click on retweet button
-
-        like_button = driver.find_element_by_xpath("//div[@data-testid='like']/div")  # like button
-        like_button.click() #click on like button
-        
-        time.sleep(2)
-        
-        comment = next(comment_iterator)
+for comment in commentsDict:
+    try:
+        # Find the comment input box and type the comment
         send_button = driver.find_element(By.CLASS_NAME, 'public-DraftStyleDefault-ltr')
         send_button.send_keys(comment)
-except StopIteration:
-    print("All comments have been used.")
-        
         time.sleep(1)
         
-        # Click the post reply
-        driver.execute_script('document.querySelector("#react-root > div > div > div.css-175oi2r.r-13qz1uu.r-417010.r-18u37iz > main > div > div > div > div > div > section > div > div > div:nth-child(2) > div > div > div > div > div.css-175oi2r.r-14lw9ot.r-1h8ys4a.r-1f1sjgu > div:nth-child(2) > div > div > div > div.css-175oi2r.r-1iusvr4.r-16y2uox.r-1777fci.r-1h8ys4a.r-1bylmt5.r-13tjlyg.r-7qyjyx.r-1ftll1t > div.css-175oi2r.r-14lw9ot.r-jumn1c.r-xd6kpl.r-gtdqiz.r-ipm5af.r-184en5c > div:nth-child(2) > div > div > div > div.css-175oi2r.r-sdzlij.r-1phboty.r-rs99b7.r-lrvibr.r-19u6a5r.r-2yi16.r-1qi8awa.r-ymttw5.r-1loqt21.r-o7ynqc.r-6416eg.r-1ny4l3l").click()')
-        
-        time.sleep(2)  
+        # Click the post reply button
+        driver.execute_script('document.querySelector("[data-testid=\'tweetButtonInline\']").click()')
+        time.sleep(2)
 
         counter += 1
-        if counter == 1: #Change '5' to 'how many comments you want to do for a post...
+        if counter == MAX_COMMENTS:  # Stop when reaching the desired number of comments
             break
-        
+
     except Exception as e:
         print("An error occurred:", e)
-        break  
-        
-time.sleep(2)
+        break
 
+# Close the browser
+time.sleep(2)
 driver.close()
 
+#3rd account
+driver = webdriver.Chrome()
+driver.maximize_window()
 
+# Open Twitter login page
+driver.get("https://twitter.com/i/flow/login")
+time.sleep(4)
+
+# Enter username
+email = driver.find_element(By.NAME, 'text')
+email.send_keys("twitter123")  # Replace with your valid Twitter username
+email.send_keys(Keys.ENTER)
+time.sleep(3)
+
+# Enter password
+password = driver.find_element(By.NAME, "password")
+password.send_keys("twitter_1234")  # Replace with your valid Twitter password
+password.send_keys(Keys.ENTER)
+time.sleep(5)
+
+# Navigate to the target tweet
+driver.get("https://twitter.com/elonmusk/status/1708660084992029126")  # Replace with your tweet URL
+time.sleep(5)
+
+# Counter to track the number of comments posted
+counter = 0
+
+for comment in commentsDict:
+    try:
+        # Find the comment input box and type the comment
+        send_button = driver.find_element(By.CLASS_NAME, 'public-DraftStyleDefault-ltr')
+        send_button.send_keys(comment)
+        time.sleep(1)
+        
+        # Click the post reply button
+        driver.execute_script('document.querySelector("[data-testid=\'tweetButtonInline\']").click()')
+        time.sleep(2)
+
+        counter += 1
+        if counter == MAX_COMMENTS:  # Stop when reaching the desired number of comments
+            break
+
+    except Exception as e:
+        print("An error occurred:", e)
+        break
+
+# Close the browser
+time.sleep(2)
+driver.close()
+
+#4th account
+driver = webdriver.Chrome()
+driver.maximize_window()
+
+# Open Twitter login page
+driver.get("https://twitter.com/i/flow/login")
+time.sleep(4)
+
+# Enter username
+email = driver.find_element(By.NAME, 'text')
+email.send_keys("twitter123")  # Replace with your valid Twitter username
+email.send_keys(Keys.ENTER)
+time.sleep(3)
+
+# Enter password
+password = driver.find_element(By.NAME, "password")
+password.send_keys("twitter_1234")  # Replace with your valid Twitter password
+password.send_keys(Keys.ENTER)
+time.sleep(5)
+
+# Navigate to the target tweet
+driver.get("https://twitter.com/elonmusk/status/1708660084992029126")  # Replace with your tweet URL
+time.sleep(5)
+
+# Counter to track the number of comments posted
+counter = 0
+
+for comment in commentsDict:
+    try:
+        # Find the comment input box and type the comment
+        send_button = driver.find_element(By.CLASS_NAME, 'public-DraftStyleDefault-ltr')
+        send_button.send_keys(comment)
+        time.sleep(1)
+        
+        # Click the post reply button
+        driver.execute_script('document.querySelector("[data-testid=\'tweetButtonInline\']").click()')
+        time.sleep(2)
+
+        counter += 1
+        if counter == MAX_COMMENTS:  # Stop when reaching the desired number of comments
+            break
+
+    except Exception as e:
+        print("An error occurred:", e)
+        break
+
+# Close the browser
+time.sleep(2)
+driver.close()
+
+#5th account
+driver = webdriver.Chrome()
+driver.maximize_window()
+
+# Open Twitter login page
+driver.get("https://twitter.com/i/flow/login")
+time.sleep(4)
+
+# Enter username
+email = driver.find_element(By.NAME, 'text')
+email.send_keys("twitter123")  # Replace with your valid Twitter username
+email.send_keys(Keys.ENTER)
+time.sleep(3)
+
+# Enter password
+password = driver.find_element(By.NAME, "password")
+password.send_keys("twitter_1234")  # Replace with your valid Twitter password
+password.send_keys(Keys.ENTER)
+time.sleep(5)
+
+# Navigate to the target tweet
+driver.get("https://twitter.com/elonmusk/status/1708660084992029126")  # Replace with your tweet URL
+time.sleep(5)
+
+# Counter to track the number of comments posted
+counter = 0
+
+for comment in commentsDict:
+    try:
+        # Find the comment input box and type the comment
+        send_button = driver.find_element(By.CLASS_NAME, 'public-DraftStyleDefault-ltr')
+        send_button.send_keys(comment)
+        time.sleep(1)
+        
+        # Click the post reply button
+        driver.execute_script('document.querySelector("[data-testid=\'tweetButtonInline\']").click()')
+        time.sleep(2)
+
+        counter += 1
+        if counter == MAX_COMMENTS:  # Stop when reaching the desired number of comments
+            break
+
+    except Exception as e:
+        print("An error occurred:", e)
+        break
+
+# Close the browser
+time.sleep(2)
+driver.close()
 
 
 
