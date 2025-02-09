@@ -1,15 +1,13 @@
 # Twiiter-auto-comments-with-multiple-accounts
 Twiiter auto comments with multiple accounts using selenium with python
 
-Here, I have added up to 2 accounts which will auto-login and auto-comment to the post. 
+Here, I have added up to 5 accounts which will auto-login and auto-comment to the post. 
 
-# Change the random words if you want different words in the 15th line, the username and password of Twitter in the 30th and 34th lines,
+# Change the random words if you want different words.
 
-# the Twitter post URL in the 37th line, and replace the '5' with how many comments you want in the 57th line. 
+# change the post url in wherever it asked
 
-# do same replace process for second acc also..
-
-# if you want one more account means, copy line from 67 to 106 and paste again and replace the usr and pswd etc and remaining things which are been replacable..
+# replace username with password upto which accounts you need.
 
 # Note: For auto-login, the accounts used must be non-authentication accounts.
 
